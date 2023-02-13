@@ -17,7 +17,7 @@ def odd_sum(int_list: list) -> int:
     summa = 0
 
     for num in int_list:
-        if num == float:
+        if type(num) == float:
             raise TypeError("Все элементы списка должны быть целыми числами")
         if num % 2 != 0:
             summa += num
