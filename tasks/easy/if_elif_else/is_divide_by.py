@@ -36,7 +36,8 @@ def is_divide_by(to_divide: int, divider_1: int, divider_2: int) -> bool:
     :return: True, если делится на 2 числа, False, если нет
     :rtype: bool
     """
-    return to_divide % divider_1 == 0 and to_divide % divider_2 == 0
+    return not (to_divide % divider_1 or to_divide % divider_2)
+    # return to_divide % divider_1 == 0 and to_divide % divider_2 == 0
 
 
 if __name__ == '__main__':
