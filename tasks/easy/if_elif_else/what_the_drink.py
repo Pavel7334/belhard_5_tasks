@@ -31,6 +31,7 @@ def what_you_drink(age: int) -> str:
     if age >= 21:
         return "можно виски"
 
+
 if __name__ == '__main__':
     age_val = int(input('Введите возраст: '))
     print(f'Напиток: {what_you_drink(age_val)}')
