@@ -18,10 +18,7 @@ def is_pow_2(number) -> bool:
     while number % 2 == 0:
         number = number // 2
 
-    if number == 1:
-        return True
-    else:
-        return False
+    return number == 1
 
 
 if __name__ == '__main__':
