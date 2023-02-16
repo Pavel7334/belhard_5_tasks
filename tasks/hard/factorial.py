@@ -9,10 +9,30 @@
 Формула нахождения факториала:
 n! = 1 * 2 * … * n, где n – это число, а n! – факториал этого числа.
 """
+import math
 
 
-def factorial(n: int) -> int:
-    return None
+# def factorial(n: int) -> int:          #Первое решение
+#     return math.factorial(n)
+
+# def factorial(n: int) -> int:         #Второе ршение
+#     if n == 0:
+#         return 1
+#     return factorial(n - 1) * n
+
+def factorial(n: int) -> int:           #Третье решение
+    factarial = 1
+
+    for i in range(2, n + 1):
+        factarial *= i
+
+    return factarial
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
