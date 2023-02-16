@@ -33,8 +33,9 @@ is_year_leap(2400) -> True
 
 
 def is_year_leap(year: int) -> bool:
-    result = None
-    return result
+
+    return year % 4 == 0 and year % 100 != 0 or year % 400 == 0
+
 
 
 if __name__ == '__main__':
