@@ -7,7 +7,7 @@
 
 
 def not_3(array: list) -> list:
-    return array
+    return [num for num in array if num % 3 != 0]
 
 
 if __name__ == '__main__':
