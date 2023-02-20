@@ -19,6 +19,22 @@
 
 
 def selection_sort(array: list) -> list:
+
+    len_array = len(array)  # число элементов в списке
+
+    for elem in range(len_array - 1):
+        minimum_value = array[elem]     # запоминаем минимальное значение
+        index_minimum_value = elem      # запоминаем индекс минимального значения
+        for i in range(elem + 1, len_array):    # поиск минимального среди оставшихся элементов
+            if minimum_value > array[i]:
+                minimum_value = array[i]
+                index_minimum_value = i
+
+        if index_minimum_value != elem:     # обмен значениями, если был найден минимальный не в i-й позиции
+            t = array[elem]
+            array[elem] = array[index_minimum_value]
+            array[index_minimum_value] = t
+
     return array
 
 
